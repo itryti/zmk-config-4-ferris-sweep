@@ -11,9 +11,7 @@ permissions:
 
 jobs:
   build:
-    # The module-owned workflow applies its version-matched ZMK compatibility
-    # patch before building. Pinning it keeps the module and build procedure in sync.
-    uses: nxtkb/zmk-feature-codex-micro/.github/workflows/build-user-config.yml@0240a936280eb9ecec769279715999968b9760cd
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@8feeb52eafc716c1697cfe0515e98b78281c3543
     with:
       build_matrix_path: build.yaml
       archive_name: ferris-sweep-firmware
